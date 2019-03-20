@@ -18,3 +18,5 @@ Nella prima parte del codice viene riadattato il dataset per poter essere letto 
 In seguito è stato definito il target ed è stato diviso il dataset in train-set e test-set per determinare la precisione della previsione dell'albero.\
 E' stato inoltre verificato quale fosse il parametro max_depth adatto a seconda del train-set, seguendo le indicazioni dell'articolo  ["InDepth: Parameter tuning for Decision Tree"](https://medium.com/@mohtedibf/indepth-parameter-tuning-for-decision-tree-6753118a03c3) di _Mohtadi Ben Fraj_, illustrandone il grafico rispetto alla sua variazione.\
 Infine, dopo aver creato l'albero decisionale ed aver determinato la precisione della previsione mediante il 10-fold cross validation (_circa 0.83_), è stato disegnato il grafo dell'albero, seguendo il codice ottenuto dall'articolo ["Creating and Visualizing Decision Trees with Python"](https://pythonprogramminglanguage.com/decision-tree-visual-example/) di _Russel_.
+
+_Per maggiori chiarimenti si prega di leggere la relazione allegata nella repository._
