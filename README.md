@@ -1,6 +1,6 @@
 # AIproject
 Il codice utilizzato permette di fare uso del _DecisionTree_ di scikit-learn per determinare se un nuovo impiegato avrà uno stipendio maggiore rispetto alla mediana degli stipendi degli impiegati nel dataset.
-Il dataset è reperibile [qui](https://www.kaggle.com/stackoverflow/so-survey-2017).
+Il dataset è reperibile su [Stack Overflow Developer Survey, 2017](https://www.kaggle.com/stackoverflow/so-survey-2017).
 
 Sono state usate le librerie:
 * __numpy__, __pandas__ per operare sul _dataset_
