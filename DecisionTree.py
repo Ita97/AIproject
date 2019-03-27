@@ -29,17 +29,15 @@ dataset = dataset.drop(['ExpectedSalary', 'NonDeveloperType'], axis=1)
 print("Dimensione dataset dopo rimozione colonne irrilevanti e la colonna Salario: ", dataset.shape)
 
 #  4)trasformare le colonne con stringhe in tante colonne binarie, separando anche quelle con valori sovrapposti.
-#    I valori NaN vengono trasformati in stringa per essere utilizzati nella previsione.
+#    I valori NaN vengono trasformati in stringa per essere utilizzati anch'essi nella previsione.
 
 columns = dataset.columns.values
 is_num = np.array([col for col in dataset.dtypes != 'object'])
 col_num = columns[is_num]
-col_obj = columns[~is_num]
+col_obj = columns[~is_num]    
 
 for col in col_obj:
     dataset[col].fillna(value="NaN", inplace=True)
-
-for col in col_obj:
     tdf = dataset[col].str.get_dummies(sep='; ')
     tdf.columns = [col+'_'+s for s in tdf.columns]
     dataset = dataset.join(tdf).drop(col, axis=1)
@@ -111,7 +109,6 @@ print("AUC score: ", roc_auc)
 
 # 10-fold cross validation con Decision Tree
 
-kf = KFold(n_splits=10)
 k_fold = KFold(n_splits=10, shuffle=True, random_state=RANDOM_STATE)
 scores = cross_val_score(clf, x_train, y_train, cv=k_fold)
 print('10-fold cross validation score:\n {}'.format(scores))
